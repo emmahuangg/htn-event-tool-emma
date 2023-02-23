@@ -23,7 +23,7 @@ export const Sidebar = (props) => {
     <div className='w-full h-fit grid gap-5' >
       {/* Search bar for user to search events by name */}
       <span className='flex gap-5'>
-        <input autoComplete="off" onChange={handleSearch} className='bg-black ring-4 ring-blue outline-none rounded-xl mt-1 px-3 py-1 lg:text-lg text-md text-white font-bold w-full' type="text" value={props.search} name="search" placeholder='Search event by name'/>
+        <input autoComplete="off" onChange={handleSearch} className='bg-blue ring-4 ring-blue outline-none rounded-xl mt-1 px-3 py-1 lg:text-lg text-md text-white font-bold w-full' type="text" value={props.search} name="search" placeholder='Search event name'/>
         <button disabled={true}><AiOutlineSearch className='text-3xl text-white font-extrabold rounded-full bg-blue p-1 drop-shadow-lg shadow-pureBlack ring-4 ring-blue' /></button>
       </span>
 

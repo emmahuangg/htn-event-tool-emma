@@ -62,9 +62,9 @@ export const Login = () => {
             <h1 className='text-4xl text-black font-extrabold mb-3'>Login</h1>
             <p className='lg:text-lg text-sm text-grey font-light mb-3'>Login to view and join private events.</p>
             <p className='text-lg text-black font-bold my-1'>Email</p>
-            <input className=' bg-white ring-2 ring-pink outline-none rounded-xl my-1 px-3 py-1 lg:text-lg text-black lg:w-80 w-60 text-sm' type="email" name="email" placeholder="hackTheNorthUser@gmail.com" value={formData.email} onChange={handleChange} />
+            <input className=' bg-white ring-2 ring-pink drop-shadow-lg outline-none rounded-xl my-1 px-3 py-1 lg:text-lg text-black lg:w-80 w-60 text-sm' type="email" name="email" placeholder="hackTheNorthUser@gmail.com" value={formData.email} onChange={handleChange} />
             <p className='text-lg text-black font-bold my-1'>Password</p>
-            <input className='bg-white ring-2 ring-pink outline-none rounded-xl my-1 px-3 py-1 lg:text-lg text-black lg:w-80 w-60 text-sm' type="password" name="password" placeholder="abcabcabc" value={formData.password} onChange={handleChange} />
+            <input className='bg-white ring-2 ring-pink drop-shadow-lg outline-none rounded-xl my-1 px-3 py-1 lg:text-lg text-black lg:w-80 w-60 text-sm' type="password" name="password" placeholder="abcabcabc" value={formData.password} onChange={handleChange} />
             <button className='bg-gradient-to-r from-pink to-purple rounded-xl py-2 px-auto text-white block text-xl mt-6 lg:w-80 w-60 font-extrabold mb-2 shadow-lg hover:shadow-purple shadow-pink transition-all duration-200'>Login</button>
             <h1 className=' h-8 mt-6 lg:text-lg text-sm text-grey font-light'>{alert}</h1>
           </form>
