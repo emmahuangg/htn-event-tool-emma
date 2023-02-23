@@ -41,9 +41,9 @@ export const EventDisplay = (props) => {
                         <h1 className='bg-blue text-white px-3 py-1 my-auto w-fit rounded-full font-extrabold text-lg'>{stringFormatter(event.event_type)}</h1>
                         <h1 className='bg-yellow text-black px-3 py-1 my-auto w-fit rounded-full font-extrabold text-lg'>{stringFormatter(event.permission)}</h1>
                     </span>
-                        <h1 className=' text-white py-1 w-fit rounded-full font-extrabold text-2xl'>{stringFormatter(event.name)}</h1>
+                    <h1 className=' text-white py-1 font-extrabold text-2xl'>{stringFormatter(event.name)}</h1>
                     <hr className='text-white '/>
-                <h1 className='py-1 w-fit rounded-full text-md text-white mb-2'>{stringFormatter(event.description)}</h1>
+                    <h1 className='py-1 w-fit text-md text-white mb-2'>{stringFormatter(event.description)}</h1>
                 <div className='grid lg:grid-cols-2 md:grid-cols-2'>
                     {event.speakers[0] && <div className='mb-3'>
                         <h1 className=' text-white py-1 w-fit rounded-full font-extrabold text-2xl'>Speakers</h1>
