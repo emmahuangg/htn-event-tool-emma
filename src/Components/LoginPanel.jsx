@@ -1,0 +1,36 @@
+import React from 'react'
+import { useNavigate } from "react-router-dom";
+
+export const LoginPanel = (props) => {
+    let navigate = useNavigate();
+    const routeChange = (path) => {
+        navigate(path);
+    }
+
+    const handleLogout = () => { 
+        sessionStorage.clear();
+        props.toggleLogin();
+    }
+    return (
+        <div className='mb-8'>
+            {props.loginState && <div><hr className='text-white mb-8'/>
+            <span className='flex gap-5'>
+                <h1 className='text-yellow font-extrabold text-6xl my-auto italic'>Welcome, hacker!</h1>
+                <button onClick={() => handleLogout()} className='text-black bg-yellow rounded-full px-4 py-2 font-extrabold shadow-lg shadow-pureBlack text-3xl hover:bg-white transition-all duration-200 ml-auto'>LOGOUT</button>
+            </span>
+            <hr className='text-white mt-8' /></div>
+            }
+            {!props.loginState && <div><hr className='text-white mb-8' />
+                <span className='flex gap-5'>
+                    <h1 className='text-yellow font-extrabold text-6xl my-auto italic'>LOGIN NOW</h1>
+                    <h1 className='text-white font-bold text-3xl my-auto'>and get access to private HTN events.</h1>
+                    <button onClick={() => routeChange('/login')} className='text-black bg-yellow rounded-full px-4 py-2 font-extrabold shadow-lg shadow-pureBlack text-3xl hover:bg-white transition-all duration-200 ml-auto'>LOGIN</button>
+                </span>
+                <hr className='text-white mt-8' />
+            </div>
+            }
+        </div>
+    )
+}
+
+export default LoginPanel;
