@@ -30,7 +30,7 @@ export const EventDisplay = (props) => {
     }
 
     const clearRelated = () => { 
-        props.setRelatedEvents("");
+        props.setRelatedEvents(null);
     }
 
     const events = props.data?.map(
@@ -72,7 +72,7 @@ export const EventDisplay = (props) => {
                     <button onClick={() => {handleRelatedEvents(event)}} className='flex text-center bg-gradient-to-r from-green to-blue rounded-full py-2 px-5 px-auto text-white text-xl w-fit font-extrabold shadow-md hover:shadow-green shadow-blue transition-all duration-200'>Related events <BiLink className='my-auto ml-2 text-2xl text-white' /></button>
                 </div>
                 </div>
-                {props.relatedEvents.id === event.id && 
+                {props.relatedEvents && props.relatedEvents.id === event.id && 
                     <div className='my-3 flex gap-5'>
                         <AiFillCaretDown className='text-yellow font-bold text-2xl my-auto' />
                         <h1 className='text-yellow my-auto font-bold text-xl'>Events related to {event.name}:</h1>

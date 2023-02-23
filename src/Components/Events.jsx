@@ -20,7 +20,7 @@ export const Events = (props) => {
         tech_talk: false
     });
 
-    const [relatedEvents, setRelatedEvents] = useState("");
+    const [relatedEvents, setRelatedEvents] = useState(null);
     const scrollHere = useRef(null)
 
 
@@ -93,7 +93,7 @@ export const Events = (props) => {
                 }
             }
             if (filterOn) {
-                display = display.filter(event => filter[event.event_type] || event.id === relatedEvents.id);
+                display = display.filter(event => (filter[event.event_type] || (relatedEvents && event.id === relatedEvents.id)));
             }
 
             // Related events control:
