@@ -32,7 +32,7 @@ export const Events = (props) => {
                     setEventData(data)
                 }
             })
-    })
+    }, [eventData])
 
     function compareAlpha(a, b) {
         if (a.name < b.name) {

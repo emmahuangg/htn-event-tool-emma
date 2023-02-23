@@ -50,7 +50,7 @@ export const EventDisplay = (props) => {
                         <span className='flex gap-5'>
                             {event.speakers?.map((speaker, idx) =>
                                 <div className='mt-2' key={idx}>
-                                    <div className="h-24 w-24 rounded-full my-2" style={{ backgroundImage: `url(${speaker.profile_pic}), url("https://images.pexels.com/photos/7586689/pexels-photo-7586689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")`, backgroundSize: "cover" }} />
+                                    <div className="h-24 w-24 rounded-full my-2" style={{ backgroundImage: `url("https://images.pexels.com/photos/7586689/pexels-photo-7586689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")`, backgroundSize: "cover" }} />
                                     <h1 className='text-white font-bold text-lg text-center'>{speaker.name}</h1>
                                 </div>
                             )}
