@@ -30,7 +30,7 @@ export const EventDisplay = (props) => {
     }
 
     const clearRelated = () => { 
-        props.setRelatedEvents("");
+        props.setRelatedEvents();
     }
 
     const events = props.data?.map(

@@ -20,7 +20,7 @@ export const Events = (props) => {
         tech_talk: false
     });
 
-    const [relatedEvents, setRelatedEvents] = useState("");
+    const [relatedEvents, setRelatedEvents] = useState();
     const scrollHere = useRef(null)
 
 
@@ -107,8 +107,9 @@ export const Events = (props) => {
     }, [props.loginState, eventData, search, sort, filter, relatedEvents])
 
     useEffect(() => { 
-        scrollHere.current.scrollIntoView()
-
+        if (relatedEvents) {
+            scrollHere.current.scrollIntoView()
+        }
     }, [relatedEvents])
     return (
         <div className='grid grid-cols-3 gap-5' ref={scrollHere}>
