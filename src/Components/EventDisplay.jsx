@@ -9,7 +9,7 @@ export const EventDisplay = (props) => {
     }
     const dateConverter = (epoch) => { 
         let date = new Date(epoch);
-        return <div className='p-3 outline outline-4 outline-pink rounded-xl'>
+        return <div className='p-3 ring-4 ring-pink rounded-xl'>
             <h1 className='text-pink font-extrabold text-2xl'>{months[date.getMonth()].substring(0, 3)} {date.getDay()}</h1>
             <h1 className='text-pink font-extrabold text-2xl'>{date.getHours() < 10 ? '0' : ''}{date.getHours()}:{date.getMinutes() < 10 ? '0' : ''}{date.getMinutes()}</h1>
         </div>;
