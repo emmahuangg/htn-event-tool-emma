@@ -23,12 +23,12 @@ export const Sidebar = (props) => {
     <div className='w-fit h-fit grid gap-5' >
       {/* Search bar for user to search events by name */}
       <span className='flex gap-5'>
-        <input autoComplete="off" onChange={handleSearch} className='bg-blue ring-4 ring-blue outline-none rounded-xl mt-1 px-3 py-1 lg:text-lg text-md text-white font-bold w-full' type="text" value={props.search} name="search" placeholder='Search event by name'/>
+        <input autoComplete="off" onChange={handleSearch} className='bg-blue ring-4 ring-blue outline-none rounded-xl mt-1 px-3 py-1 lg:text-lg text-md text-white font-bold w-fit' type="text" value={props.search} name="search" placeholder='Search event by name'/>
         <button disabled={true}><AiOutlineSearch className='text-3xl text-white font-extrabold rounded-full bg-blue p-1 drop-shadow-lg shadow-pureBlack ring-4 ring-blue' /></button>
       </span>
 
       {/* Sorting options for user to sort by alphabetical, start time */}
-      <span className='ring-4 ring-pink rounded-xl p-4 grid gap-3'>
+      <span className='ring-4 ring-pink rounded-xl p-4 grid gap-3 w-full'>
       <h1 className='lg:text-xl text-md text-pink font-extrabold block'>Sort by:</h1>
       <span className='flex gap-5'>
         <input
@@ -59,7 +59,7 @@ export const Sidebar = (props) => {
       </span>
 
       {/* Filtering options for user to filter by event type */}
-      <span className='ring-4 ring-green rounded-xl p-4 grid gap-3'>
+      <span className='ring-4 ring-green rounded-xl p-4 grid gap-3 w-full'>
         <h1 className='lg:text-xl text-md text-green font-extrabold block'>Filter by:</h1>
       <span className='flex gap-5'>
         <input

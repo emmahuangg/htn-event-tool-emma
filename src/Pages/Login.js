@@ -50,12 +50,12 @@ export const Login = () => {
   return (
     <div className='bg-black min-h-screen pt-10 pb-20 lg:px-16 px-6 w-full'>
       <Header />
-      <div className='grid lg:grid-cols-2 bg-white rounded-xl  h-full w-full gap-4 mt-4 overflow-hidden'>
-        <div className='lg:col-span-1 relative'>
-          <img src={login} className='lg:w-auto lg:h-full w-full h-auto object-cover relative' alt="Event" />
+      <div className='grid lg:grid-cols-2 md:grid-cols-2 bg-white rounded-xl  h-full w-full gap-4 mt-4 overflow-hidden'>
+        <div className='lg:col-span-1 md:col-span-1 relative'>
+          <img src={login} className='lg:w-auto md:w-auto lg:h-full md:h-full w-full h-auto object-cover relative' alt="Event" />
           <button onClick={() => routeChange('/')} className='absolute top-5 left-5 text-black bg-white rounded-full px-3 py-2 font-extrabold shadow-lg shadow-grey text-xl hover:bg-pink transition-all duration-200'>Back</button>
         </div>
-        <div className='lg:col-span-1 bg-white w-full'>
+        <div className='lg:col-span-1 md:col-span-1 bg-white w-full'>
           {/* Sample login form */}
           <form autoComplete="off" onSubmit={handleLoginSubmit} className='lg:p-10 m-6 w-full'>
             <FiCodesandbox className='text-5xl text-black mb-3 font-extrabold'/>
