@@ -20,7 +20,7 @@ export const Events = (props) => {
         tech_talk: false
     });
 
-    const [relatedEvents, setRelatedEvents] = useState();
+    const [relatedEvents, setRelatedEvents] = useState("");
     const scrollHere = useRef(null)
 
 
