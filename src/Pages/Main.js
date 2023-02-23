@@ -4,6 +4,7 @@ import LoginPanel from '../Components/LoginPanel'
 import Title from '../Components/Title';
 import { useState } from 'react';
 import Events from '../Components/Events';
+import Footer from '../Components/Footer';
 
 export const Main = () => {
     const toggleLogin = () => {
@@ -39,11 +40,12 @@ export const Main = () => {
     )
     
     return (
-        <div className='bg-black min-h-screen pt-10 pb-20 px-16 w-screen overflow-hidden'>
+        <div className='bg-black min-h-screen pt-10 pb-20 lg:px-16 px-6 w-screen overflow-hidden'>
             <Header />
             <Title />
             <LoginPanel loginState={loginState} toggleLogin={toggleLogin} />
             <Events loginState={loginState} />
+            <Footer />
         </div>
     )
 }

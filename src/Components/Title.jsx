@@ -19,11 +19,13 @@ export const Title = () => {
     }, []);
   return (
       <div className="relative h-screen">
-          <img src={background} className='w-auto h-full absolute top-0' alt="Colorful buildings"></img>
-          <h1 className='font-extrabold text-white text-5xl z-10 relative mt-24 mb-8'>Hack the North</h1>
-          <TextTransition springConfig={presets.gentle}>
-              <h1 className='font-extrabold text-transparent text-9xl bg-clip-text bg-gradient-to-r from-pink to-yellow'>{TEXTS[index % TEXTS.length]}</h1>
-          </TextTransition>
+          <img src={background}  className='w-auto h-full lg:object-contain object-cover lg:pt-28 pt-0' alt="Colorful buildings"></img>
+          <span className='absolute lg:top-0 top-20'>
+          <h1 className='font-extrabold text-white lg:text-5xl md:text-3xl text-3xl z-10 relative lg:mt-24 lg:mb-8 mb-4'>Hack the North</h1>
+          <TextTransition springConfig={presets.gentle} className='relative'>
+                  <h1 className='font-extrabold text-transparent lg:text-9xl md:text-7xl text-4xl bg-clip-text bg-gradient-to-r from-pink to-yellow whitespace-nowrap'>{TEXTS[index % TEXTS.length]}</h1>
+              </TextTransition>
+          </span>
       </div>
   )
 }

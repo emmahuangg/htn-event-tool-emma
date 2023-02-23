@@ -112,9 +112,9 @@ export const Events = (props) => {
         }
     }, [relatedEvents])
     return (
-        <div className='grid grid-cols-3 gap-5' ref={scrollHere}>
-            <Sidebar className='col-span-1' setSearch={setSearch} search={search} setSort={setSort} sort={sort} filter={filter} setFilter={setFilter} />
-            <EventDisplay className='col-span-2' data={displayData} setSearch={setSearch} setSort={setSort} setFilter={setFilter} setRelatedEvents={setRelatedEvents} relatedEvents={relatedEvents} />
+        <div className='grid lg:grid-cols-3 gap-5 w-full' ref={scrollHere}>
+            <Sidebar className='lg:col-span-1' setSearch={setSearch} search={search} setSort={setSort} sort={sort} filter={filter} setFilter={setFilter} />
+            <EventDisplay className='lg:col-span-2' data={displayData} setSearch={setSearch} setSort={setSort} setFilter={setFilter} setRelatedEvents={setRelatedEvents} relatedEvents={relatedEvents} />
         </div>
     )
 }
